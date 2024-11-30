@@ -1,0 +1,88 @@
+*,
+::before,
+::after {
+box-sizing: border-box;
+border-width: 0;
+border-style: solid;
+border-color: #e5e7eb;
+}
+
+body, h2, p, h1 {
+margin: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #6f73d2;
+    color: white;
+}
+
+#main-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#contend-container {
+    height: 50vh;
+    margin: 0 auto;
+}
+
+.number {
+    font-size: 30vh;
+    font-weight: 600;
+    text-align: center;
+    animation: titleAnimation 1s ease 2s infinite;
+}
+@keyframes numberAnimation {
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.alert {
+    font-size: 6vh;
+    font-weight: 600;
+    text-align: center;
+    animation: alertAnimation 2.5s ease infinite;
+}
+@keyframes alertAnimation {
+    20% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.05);
+    }
+}
+
+#title {
+    font-size: 4rem;
+    font-weight: 600;
+    animation: titleAnimation 1s ease 2s infinite;
+}
+@keyframes titleAnimation {
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width: 1024px) {
+    .number {
+        font-size: 40vh;
+    }
+    .alert {
+        font-size: 10vh;
+    }
+    #title {
+        font-size: 8vh;
+    }
+}
