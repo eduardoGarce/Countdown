@@ -38,6 +38,7 @@ body {
     font-size: 30vh;
     font-weight: 600;
     text-align: center;
+    display: none;
     animation: titleAnimation 1s ease 2s infinite;
 }
 @keyframes numberAnimation {
@@ -67,12 +68,90 @@ body {
 #title {
     font-size: 4rem;
     font-weight: 600;
-    animation: titleAnimation 1s ease 2s infinite;
+    text-align: center;
 }
 @keyframes titleAnimation {
     50% {
         transform: scale(1.1);
     }
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+
+}
+
+#input {
+    height: 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    outline: none;
+    color: #6f73d2;
+    width: 100%;
+}
+
+#submit {
+    border-radius: 0.5rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6f73d2;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+#submit:hover {
+    letter-spacing: 0.2rem;
+}
+
+#title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#label {
+    display: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#back {
+    display: none;
+    background-color: #5053a8;
+    color: white;
+    border-radius: 0.5rem;
+    border: 2px solid white;
+    font-size: 2rem;
+    font-weight: 600;
+    width: 80%;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: displayBtn 2.2s ease forwards 2s;
+}
+#back:hover {
+    background-color: #37398f;
+}
+
+@keyframes displayBtn {
+    100% {
+        opacity: 1;
+    }
+}
+
+#number-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
 }
 
 @media (min-width: 1024px) {
